@@ -19,7 +19,7 @@ export const markAsSelected = (selectedItemPage: PagesType) => {
     itemName?.classList.add('show')
 }
 
- const onClickMenu = (selectedItemPage: PagesType) => {
+const onClickMenu = (selectedItemPage: PagesType) => {
     markAsSelected(selectedItemPage)
     sharingInformationService.setSubject(selectedItemPage)
 

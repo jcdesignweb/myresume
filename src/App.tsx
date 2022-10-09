@@ -8,39 +8,39 @@ import './App.css'
 
 function App() {
 
-	return (
-		<div className="App">
+    return (
+        <div className="App">
 
-			<main>
-				<Menu />
+            <main>
+                <Menu />
 
-				<div className="pop-animation">
+                <div className="pop-animation">
 
-					<a onClick={onClickEnterButton} id="btnEnter">Ingresar
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</a>
+                    <a onClick={onClickEnterButton} id="btnEnter">Ingresar
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
 
-				</div>
-				<section id="me">
-					<div className="presentation">
-						<div className="pres-left">
+                </div>
+                <section id="me">
+                    <div className="presentation">
+                        <div className="pres-left">
 
-							<Pages />
+                            <Pages />
 
-						</div>
-						<div className="pres-right">
-							<div className='top-menu'>
-								<CloseButton />
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-		</div>
-	)
+                        </div>
+                        <div className="pres-right">
+                            <div className='top-menu'>
+                                <CloseButton />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    )
 }
 
 export default App

@@ -1,4 +1,3 @@
-
 export enum PagesType {
     pageHome = 'intro',
     pageStudies = 'studies',
