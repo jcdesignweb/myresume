@@ -1,0 +1,14 @@
+.content {
+    padding: 20px;
+}
+
+.cards {
+    display: grid;
+    column-gap: 2ch;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 535px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    row-gap: 2ch;
+    
+}

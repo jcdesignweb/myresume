@@ -1,0 +1,43 @@
+
+.scene {
+    height: 260px;
+    min-height: 200px;
+    border: 1px solid #CCC;
+    perspective: 600px;
+}
+  
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+  
+.card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+    background: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 320px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    backface-visibility: hidden;
+}
+  
+.card__face--front {
+    
+}
+
+.card__face--back {
+    color: black;
+    line-height: inherit;
+    transform: rotateY(180deg);
+}

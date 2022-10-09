@@ -1,0 +1,51 @@
+
+#menu {
+    position: absolute;
+    left: 30px;
+    top: 33%;
+    padding: 0 0 0 10px;
+
+    
+}
+
+#menu ul {
+    text-align: center;
+    display: block;
+    overflow: hidden;
+}
+
+#menu ul li {
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    clear: both;
+    float: left;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 25px;
+}
+
+#menu ul li a{
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu ul li.selected a,#menu ul li:hover a {
+    color: rgb(253, 92, 33);
+}
+
+#menu ul li a .icon {
+    font-size: 18px;
+}
+
+#menu .item-name {
+    color: white;
+    visibility: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    left: 75px;
+
+}
+

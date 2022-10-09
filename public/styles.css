@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-bg-color: black;
+    --bg-primary: #05ea9e;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+.hide {
+    visibility: hidden;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.show {
+    visibility: visible !important;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 { font-size: 36px; }
+
+
+button {
+    background: white;
+    border: 2px outset black;
+    color: black;
+    cursor: pointer;
+    font-weight: bold; 
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+.pop-animation {
+    bottom: 45%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    position: absolute;
+}
+
+
+#me {
+    z-index: 100;
+}
+
+#me .presentation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px;
+    grid-auto-rows: minmax(100px, auto);
+    
+    transition: 1s;
+}
+
+
+@keyframes steam1 {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+}
+
+#me .presentation.active {
+    animation: steam1 1s linear 1;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+#me .presentation .pres-left, #me .presentation .pres-right {
+    height: 100vh;
+}
+
+#me .presentation .pres-left {
+    background-color: black;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#me .presentation .pres-right {
+    background-color: white;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+a#btnEnter {
+    background: #fff;
+    border-radius: 0px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    
+}
+
+
+
+a#btnEnter:hover {
+    /*background: var(--bg-primary);*/
+    color: #050801;
+    box-shadow: 0 0 0px orange, 0 0 0px orange, 0 0 0 orange, 0 0 151px orange;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a#btnEnter:nth-child(1) {
+    /*filter: hue-rotate(270deg);*/
+}
+
+a#btnEnter:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+a#btnEnter span {
+    position: absolute;
+    display: block;
+}
+
+a#btnEnter span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, orangered);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+a#btnEnter span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, orangered);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+a#btnEnter span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, orangered);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+a#btnEnter span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, orangered);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+
+
+#writer {
+    color: red;
+    font-size: 70px;
+}
+
+.top-menu {
+    height: 30px;
+    float: right;
+    margin: 10px 10px 0 0;
+}
+
