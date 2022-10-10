@@ -5,33 +5,42 @@ hr {
     
 }
 
-#contact form {
-    text-align: center;
-    margin-top: 30px;
+.social-networks a {
+    margin-left: 20px;
+
 }
 
-#contact form input:nth-child(1) {
-    margin-top: 20px;
+#mail {
+    margin-left: 17px;
 }
 
-#contact form input {
+ul li {
+    margin-top: 10px;
+}
+
+.blocks {
+    overflow: hidden;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+    width: 25%;
+    border-right: 4px solid black;
     
-    border-radius: 10px;
-    height: 30px;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 50%;
+}
+.right {
+    padding-left: 30px;
+    float: left;
+    width: 65%;   
+    
+    
 }
 
-#contact form textarea {
-    border: 2px solid black;
-    border-radius: 10px;
+.right h2 {
+    
 }
-
-#contact form button {
-    height: 50px;
-    padding: 10px 20px;
-    width: 150px;
-
+.right h2, .right h3 {
+    text-align: left;
 }
-

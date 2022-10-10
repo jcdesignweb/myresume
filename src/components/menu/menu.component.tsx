@@ -4,10 +4,13 @@ import './menu.css'
 
 
 export const markAsSelected = (selectedItemPage: PagesType) => {
-    const links: any = document.querySelectorAll('ul li');
+    const links: any = document.querySelectorAll('#menu ul li');
+    console.log("Links", links)
     for (const link of links) {
         const itemNameEl = link.childNodes[1]
         link.classList.remove('selected')
+
+        
         itemNameEl.classList.remove('show')
     }
 
