@@ -1,0 +1,8 @@
+@media (max-width: 850px) {
+
+    html {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+    }
+}

@@ -1,11 +1,10 @@
-
 #menu {
     position: absolute;
     left: 30px;
     top: 33%;
     padding: 0 0 0 10px;
 
-    
+
 }
 
 #menu ul {
@@ -25,13 +24,14 @@
     width: 25px;
 }
 
-#menu ul li a{
+#menu ul li a {
     color: white;
     text-decoration: none;
     text-align: center;
 }
 
-#menu ul li.selected a,#menu ul li:hover a {
+#menu ul li.selected a,
+#menu ul li:hover a {
     color: rgb(253, 92, 33);
 }
 
@@ -49,3 +49,29 @@
 
 }
 
+
+@media (max-width: 850px) {
+    #menu {
+        background-color: black;
+        bottom: 0;
+        top: initial;
+        left: initial;
+        padding: 0;
+        width: 100%;
+        z-index: 90;
+    }
+
+    #menu ul {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    #menu ul li {
+        clear: initial;
+        margin-left: 15px;
+    }
+
+    #menu .item-name {
+        display: none;
+    }
+}

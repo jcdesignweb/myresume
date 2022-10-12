@@ -34,3 +34,16 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@media (max-width: 1250px) {
+
+    .cards {
+        display: grid;
+        column-gap: 2ch;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards .card__face--front img {
+        width: 60%;
+    }
+}

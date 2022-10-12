@@ -2,12 +2,10 @@ hr {
     background-color: black;
     border-radius: 5px;
     height: 5px;
-    
 }
 
 .social-networks a {
     margin-left: 20px;
-
 }
 
 #mail {
@@ -34,8 +32,6 @@ ul li {
     padding-left: 30px;
     float: left;
     width: 65%;   
-    
-    
 }
 
 .right h2 {
@@ -43,4 +39,37 @@ ul li {
 }
 .right h2, .right h3 {
     text-align: left;
+}
+
+@media (max-width: 440px) {
+
+    .blocks {
+        width: 90%;
+    }
+    ul {
+        width: 200px;
+        margin: 0 auto;
+    }
+    ul li {
+        float: left;
+    }
+
+    .left {
+        border-right: initial;
+        border-bottom: 4px solid black;
+        float: initial;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        width: initial;
+    }
+
+    .right {
+        float: initial;
+    }
+
+    .social-networks {
+        overflow: hidden;
+    }
+
+    
 }
