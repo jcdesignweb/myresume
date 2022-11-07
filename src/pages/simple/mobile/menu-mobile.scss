@@ -1,0 +1,20 @@
+
+.mobile-menu {
+    
+    position: absolute;
+
+    .bm-menu-wrap {
+        background-color: white;
+        top: 0;
+    }
+
+    .bm-burger-button {
+        img {
+            cursor: pointer;
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+}
+
+

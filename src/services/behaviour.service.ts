@@ -1,10 +1,13 @@
 import { markAsSelected } from '../components/menu/menu.component';
+import { sharingStageService } from '../services/subject-manager.service';
 import { PagesType } from '../models/pages-type';
 
 const animateCSS = (element: any, animation: any, actionEndedClass: string, prefix = 'animate__') => {
     // We create a Promise and return it
     new Promise((resolve) => {
         const animationName = `${prefix}${animation}`;
+
+        console.log("Element", element)
         const node = document.querySelector(element);
 
         node.classList.remove(...node.classList);
@@ -18,7 +21,6 @@ const animateCSS = (element: any, animation: any, actionEndedClass: string, pref
         }
 
         node.classList.add(actionEndedClass);
-
         node.classList.add(`${prefix}animated`, animationName);
 
         // When the animation ends, we clean the classes and resolve the Promise
@@ -47,24 +49,61 @@ export const onClickCloseButton = () => {
 
     const animationName = 'animate__zoomOutUp';
     const node = document.querySelector(pages);
-
-    // node.classList.remove(...node.classList);
-
-    // node.classList.add(actionEndedClass)
+    
     node?.classList.add('animate__animated', animationName);
+
+
+    const presLeftElement = document.querySelector(".pres-left");
+    presLeftElement?.classList.remove('small')
+
+
+    const meSide: any = document.getElementById('me')
+        meSide.classList.remove('small')
 
     setTimeout(() => {
         animateCSS(enterBtn, 'zoomIn', 'show');
-    }, 800);
+
+        sharingStageService.next("out_site");
+    }, 400);
 };
 
-export const onClickEnterButton = () => {
+export const onClickEnterButton = (isAnimated: boolean) => {
     animateCSS(enterBtn, 'zoomOut', 'hide');
-    animateCSS(menu, 'bounceInLeft', 'show');
     animateCSS(closeBtn, 'bounceInDown', 'show');
-    animateCSS(pages, 'zoomInUp', 'show');
+    const rcontainer: any = document.getElementById('pres-right-container')
 
-    selectPageHome();
+    if (isAnimated) {
+        animateCSS(menu, 'bounceInLeft', 'show');
+        animateCSS(pages, 'zoomInUp', 'show');
+        
+        rcontainer.classList.add('dhide')
+
+        selectPageHome();
+    } else {
+        rcontainer.classList.remove('dhide')
+
+        const leftSide: any = document.getElementsByClassName('pres-left')
+            console.log(leftSide)
+            leftSide[0].classList.add('small')
+
+
+        const menSimple: any = document.getElementsByClassName('menu-simple')
+        menSimple[0].classList.remove('dhide')
+        
+        const meSide: any = document.getElementById('me')
+        meSide.classList.add('small')
+
+
+        setTimeout(() => {
+            
+            
+        }, 1200);
+        
+        
+    }
+    
+
+    sharingStageService.next("in_site");
 };
 
 const selectPageHome = () => {

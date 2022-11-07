@@ -1,3 +1,4 @@
+.white {color: white; }
 #pages {
     color: black;
     position: absolute;
@@ -5,6 +6,11 @@
     width: 50%;
     left: 24%;
     top:10%;
+}
+
+.simple {
+    position: absolute;
+    height: 2500px;
 }
 
 .page {
